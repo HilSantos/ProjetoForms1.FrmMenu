@@ -1,5 +1,5 @@
-# Projeto-Forms-2025
-Criação de Formularios do Windows
+# Projeto-Forms1-FrmMenu
+Criação de Formularios Menu do Windows
 
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjetoForms2025
+namespace ProjetoForms1
 {
     public partial class FrmMenu : Form
     {
@@ -21,40 +21,50 @@ namespace ProjetoForms2025
             lblData.Text=DateTime.Now.ToLongDateString();
         }
 
-  private void timer1_Tick(object sender, EventArgs e)
+private void timer1_Tick(object sender, EventArgs e)
         {
-            //evento do relogio
+            //evento do relógio
             lblHora.Text = DateTime.Now.ToLongTimeString();
         }
 
-  private void btnClientes_Click(object sender, EventArgs e)
+private void btnClientes_Click(object sender, EventArgs e)
         {
-            FrmClientes clientes = new FrmClientes();
-            clientes.ShowDialog();
+            FrmClientes cli=new FrmClientes();
+            cli.ShowDialog();
         }
 
-  private void btnProdutos_Click(object sender, EventArgs e)
+private void btnProdutos_Click(object sender, EventArgs e)
         {
-            Produtos produtos = new Produtos();
-            produtos.ShowDialog();
+            FrmProdutos prod=new FrmProdutos();
+            prod.ShowDialog();
         }
 
-  private void btnMarcas_Click(object sender, EventArgs e)
+private void btnMarcas_Click(object sender, EventArgs e)
         {
-            Marcas marcas = new Marcas();
-            marcas.ShowDialog();
+            FrmMarcas marca=new FrmMarcas();
+            marca.ShowDialog();
         }
 
-  private void btnFornecedores_Click(object sender, EventArgs e)
+private void btnFornecedores_Click(object sender, EventArgs e)
         {
-            Fornecedores fornecedores = new Fornecedores();
-            fornecedores.ShowDialog();
+            FrmFornecedores fornecedor=new FrmFornecedores();
+            fornecedor.ShowDialog();
         }
 
-  private void btnVendas_Click(object sender, EventArgs e)
+private void btnVendas_Click(object sender, EventArgs e)
         {
-            Vendas vendas = new Vendas();
+            FrmVendas vendas=new FrmVendas();  
             vendas.ShowDialog();
         }
-    }
+
+private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+}
+
+private void FrmMenu_Load(object sender, EventArgs e)
+        {
+
+}
+}
 }
